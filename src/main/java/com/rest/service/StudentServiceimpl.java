@@ -39,4 +39,11 @@ public class StudentServiceimpl implements StudentService{
 		return student;
 	}
 
+	@Override
+	public void deleteByRollNo(Integer rollno) {
+
+		sr.deleteById(rollno);
+		
+	}
+
 }
