@@ -31,4 +31,12 @@ public class StudentServiceimpl implements StudentService{
 		return all;
 	}
 
+	@Override
+	public Student getByRollNo(Integer rollno) {
+
+		Student student = sr.findById(rollno).get();
+		
+		return student;
+	}
+
 }
