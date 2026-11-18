@@ -46,4 +46,20 @@ public class StudentServiceimpl implements StudentService{
 		
 	}
 
+	@Override
+	public void update(int rollno, Student s) {
+
+		Student st = sr.findById(rollno).get();
+		
+		st.setName(s.getName());
+		st.setEmail(s.getEmail());
+		st.setContact(s.getContact());
+		st.setAddress(s.getAddress());
+		st.setUsername(s.getUsername());
+		st.setPassword(s.getPassword());
+		
+		sr.save(st);
+		
+	}
+
 }
