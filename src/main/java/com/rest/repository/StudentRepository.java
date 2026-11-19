@@ -7,5 +7,8 @@ import com.rest.model.Student;
 
 @Repository
 public interface StudentRepository extends CrudRepository<Student, Integer> {
+	
+	public Student findByUsernameAndPassword(String username,String password);
+	
 
 }

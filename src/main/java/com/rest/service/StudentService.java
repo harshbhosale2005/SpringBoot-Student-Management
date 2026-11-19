@@ -16,4 +16,7 @@ public interface StudentService {
 	
 	public void update(int rollno,Student s);
 	
+	public Student loginCheck(String username, String password);
+	
+	
 }
