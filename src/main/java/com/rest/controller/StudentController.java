@@ -44,7 +44,7 @@ public class StudentController {
 		return st;
 		
 	}
-	
+		
 	@DeleteMapping("/deleteByRollno/{rollno}")
 	public String deleteData(@PathVariable  Integer rollno) {
 		
@@ -60,6 +60,14 @@ public class StudentController {
 		si.update(rollno, s);
 		
 		return s;
+	}
+	
+	@GetMapping("/logincheck/{username}/{password}")
+	public Student loginCheck(@PathVariable String username,@PathVariable String password) {
+		
+		Student loginCheck = si.loginCheck(username, password);
+		
+		return loginCheck;
 	}
 		
 }

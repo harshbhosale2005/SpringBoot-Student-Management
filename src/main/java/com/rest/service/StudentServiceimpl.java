@@ -62,4 +62,12 @@ public class StudentServiceimpl implements StudentService{
 		
 	}
 
+	@Override
+	public Student loginCheck(String username, String password) {
+
+		Student st = sr.findByUsernameAndPassword(username, password);
+		
+		return st;
+	}
+
 }
